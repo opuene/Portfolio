@@ -1,0 +1,281 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="prism.js"></script>
+		<script type="text/javascript" src="prism.ruby.js"></script>
+
+		<title>Opuene Junior Fiberesima</title>
+		<meta name="description" content="Opuene Junior Fiberesima is a professional software engineer specializing in full-stack development. He has extensive experience with Ruby, Rails, JavaScript, and building web applications.">
+
+	</head>
+
+	<body>
+		<div class="about-container">
+			<ul>
+				<li><a href="#" class="nav-link"> ABOUT</a></li>
+				<li><a href="#code-samples" class="nav-link"> CODE SAMPLES</a></li>
+				<li><a href="#web-apps" class="nav-link"> WEB APPS</a></li>
+				<li><a href="#skills-and-tools" class="nav-link"> SKILLS &amp; TOOLS</a></li>
+				<li class="hire-me"><a href="#hire-me" class="nav-link"> HIRE ME</a></li>
+			</ul>
+
+		    <div class="about">
+				<img src="Fibus.jpg" class="Fibus" /> 
+
+				<h1>Opuene Junior Fiberesima</h1>
+
+				<h2>Full Stack Web Developer</h2>
+
+				<hr class="grey"/>
+				<p class="bio"> 
+					Opuene Fiberesima is a business analyst who is learning code to understand how requirements are translated to product. In his previous life he worked at enterprise rent a car, producing amazing customer service and selling additional products.
+				</p>
+			</div>
+		</div>
+		<h3 id="code-samples">Code Snippets</h3>
+		<hr class="yellow">
+
+		<div class="box">
+			<h4>Temperature Conversion</h4>
+			<p>
+				This Ruby program will prompt the user for a temperature in degrees Celcius and let the user know what the corresponding temperature is in Fahrenheit.
+			</p>
+		</div>
+
+		<div class="box">
+			<pre><code class="language-ruby">puts &quot;Enter the Degree in c:&quot;
+
+c = gets.chomp
+
+c_int = c.to_i()
+
+c_in_f = ( c_int * (9 / 5)) + 32
+
+answer = &quot;#{c} in farenheit is #{c_in_f}&quot;
+
+puts answer;</code></pre>
+		</div>
+
+		<br class="clear" />
+
+		<div class="box">
+			<pre><code class="language-ruby"> def ordinal(n)
+  ending = case n % 100
+           when 11, 12, 13 then 'th'
+           else
+             case n % 10
+             when 1 then 'st'
+             when 2 then 'nd'
+             when 3 then 'rd'
+             else 'th'
+             end
+           end
+
+  &quot;This is #{n}#{ending} item&quot;
+end
+
+ordinal(1) # =&gt; &quot;This is 1st item&quot;
+ordinal(10) # =&gt; &quot;This is 10th item&quot;
+ordinal(12) # =&gt; &quot;This is 12th item&quot;
+ordinal(15) # =&gt; &quot;This is 15th item&quot;
+ordinal(112) # =&gt; &quot;This is 112th item&quot;
+ordinal(123) # =&gt; &quot;This is 123rd item&quot;</code></pre>
+		</div>
+
+		<div class="box">
+			<h4>Ordinal Challenge</h4>
+			<p>
+				This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+			</p>
+		</div>
+
+		<br class="clear" />
+		<div class="box">
+			<h4>Foobar</h4>
+			<p>
+				This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
+			</p>
+		</div>
+
+		<div class="box">
+			<pre><code class="language-ruby"> puts &quot;FooBar!&quot;
+
+puts &quot;List numbers in order.&quot;
+
+puts &quot;If divisible by 3, write Foo.&quot;
+
+puts &quot;If divisible by 5, write Bar.&quot;
+
+puts &quot;If divisible by both 3 and 5, write Foobar.&quot;
+
+puts &quot;Choose total number to count up to:&quot;
+
+count = gets.chomp
+
+ 
+
+while count.to_i != count.to_f || count.to_i == 0
+
+  puts &quot;Error! Only enter whole numbers.&quot;
+
+  puts &quot;No zeroes, words or fractions allowed. Try again.&quot;
+
+  count = gets.chomp
+
+end
+
+ 
+
+def div_by_3(num)
+
+  num % 3
+
+end
+
+ 
+
+def div_by_5(num)
+
+  num % 5
+
+end
+
+ 
+
+def div_by_3_and_5(num)
+
+  num % 15
+
+end
+
+ 
+
+n = 1
+
+while n &lt;= count.to_i
+
+  if div_by_3_and_5(n) == 0
+
+    puts &quot;Foobar&quot;
+
+  elsif div_by_3(n) == 0
+
+    puts &quot;Foo&quot;
+
+  elsif div_by_5(n) == 0
+
+    puts &quot;Bar&quot;
+
+  else
+
+    puts n
+
+  end
+
+  n += 1
+
+end</code></pre>
+		</div>
+
+		<br class="clear" />
+
+		<h3 id="web-apps">Web Apps</h3>
+		<hr class="yellow">
+
+		<div class="box">
+			<h4>Quote Generator</h4>
+			<img src="splurty.png" class="full-width" />
+			<p>
+				A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and Github for version control, and launched on Heroku.
+			</p>
+		</div>
+
+		<div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+      </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+
+    <br class="clear" />
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+    <p class="skills-and-tools"> 
+    	Opuene has developed proficiency and expertise in the following programming languages and comfort with the following tools.
+    </p>
+    <div class="icons">
+    	<img src="github.png" class="icon" />
+    	<img src="rubocop.png" class="icon" />
+    	<img src="trello.png" class="icon" />
+    	<img src="slack.png" class="icon" />
+    	<img src="codeship.png" class="icon" />
+
+    	<br class="clear" />
+    	<img src="skills.png" class="icon" />
+    </div>
+
+    <div class="contact-me" id="hire-me">
+    	<h3 class="contact-headline">Contact</h3>
+    	<hr class="yellow" />
+    	<p class="contact-info">
+    		Currently entertaining new opportunities.
+    		Please get in touch via email:
+    	</p>
+
+    	<p>
+    		<a href="mailto:opusfibz@gmail.com" class="contact-link">
+    			opusfibz@gmail.com
+    		</a>
+    	</p>
+
+    </div>
+
+	</body>
+
+</html>
